@@ -1,72 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đăng Ký Hội Viên</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 10px;
+            width: 600px;
+        }
+
+        label {
+            text-align: left;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 6px;
+            border: 1px solid black;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        textarea {
+            height: 60px;
+            resize: none;
+        }
+
+        .radio-group, .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        button {
+            grid-column: span 2;
+            padding: 5px 10px;
+            background: #f5f5f5;
+            border: 1px solid black;
+            cursor: pointer;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
     <form>
-      <label>Họ và tên: <input type="text" name="fullname" /></label
-      ><br /><br />
+        <label>Họ và tên:</label>
+        <input type="text" name="fullname">
 
-      <label>Ngày sinh: <input type="date" name="dob" /></label><br /><br />
+        <label>Ngày sinh:</label>
+        <input type="date" name="dob">
 
-      <label>Giới tính:</label>
-      <input type="radio" name="gender" value="Nam" /> Nam
-      <input type="radio" name="gender" value="Nữ" /> Nữ <br /><br />
+        <label>Giới tính:</label>
+        <div class="radio-group">
+            <input type="radio" name="gender" value="Nam"> Nam
+            <input type="radio" name="gender" value="Nữ"> Nữ
+        </div>
 
-      <label>Số điện thoại: <input type="text" name="phone" /></label
-      ><br /><br />
+        <label>Số điện thoại:</label>
+        <input type="text" name="phone">
 
-      <label>Email: <input type="email" name="email" /></label><br /><br />
+        <label>Email:</label>
+        <input type="email" name="email">
 
-      <label>Tên công ty: <input type="text" name="company_name" /></label
-      ><br /><br />
+        <label>Tên công ty:</label>
+        <input type="text" name="company_name">
 
-      <label
-        >Vai trò trong công ty:
+        <label>Vai trò trong công ty:</label>
         <select name="role">
-          <option>Giám đốc điều hành (CEO)</option>
-          <option>Nhà sáng lập</option>
-          <option>Quản lý cấp cao</option>
-          <option>Nhân viên</option>
-        </select> </label
-      ><br /><br />
+            <option>Giám đốc điều hành (CEO)</option>
+        </select>
 
-      <label
-        >Quy mô công ty:
+        <label>Quy mô công ty:</label>
         <select name="company_size">
-          <option>Doanh nghiệp nhỏ</option>
-          <option>Doanh nghiệp vừa</option>
-          <option>Tập đoàn lớn</option>
-        </select> </label
-      ><br /><br />
+            <option>Doanh nghiệp nhỏ</option>
+        </select>
 
-      <label>Ngành nghề công ty: <input type="text" name="industry" /></label
-      ><br /><br />
+        <label>Ngành nghề công ty:</label>
+        <input type="text" name="industry">
 
-      <label>Lý do tham gia câu lạc bộ:</label><br />
-      <textarea name="reason"></textarea><br /><br />
+        <label>Lý do tham gia câu lạc bộ:</label>
+        <textarea name="reason"></textarea>
 
-      <label>Kinh nghiệm lãnh đạo:</label><br />
-      <textarea name="experience"></textarea><br /><br />
+        <label>Kinh nghiệm lãnh đạo:</label>
+        <textarea name="experience"></textarea>
 
-      <label>Mục tiêu khi tham gia câu lạc bộ:</label><br />
-      <textarea name="goals"></textarea><br /><br />
+        <label>Mục tiêu khi tham gia câu lạc bộ:</label>
+        <textarea name="goals"></textarea>
 
-      <label>Chương trình sự kiện mong muốn tham gia:</label>
-      <input type="checkbox" name="event" value="Networking" /> Networking
-      <input type="checkbox" name="event" value="Workshops" /> Workshops
-      <input type="checkbox" name="event" value="Hội thảo" /> Hội thảo
-      <br /><br />
+        <label>Chương trình sự kiện mong muốn tham gia:</label>
+        <div class="checkbox-group">
+            <input type="checkbox" name="event" value="Networking"> Networking
+            <input type="checkbox" name="event" value="Workshops"> Workshops
+            <input type="checkbox" name="event" value="Hội thảo"> Hội thảo
+        </div>
 
-      <label
-        >Đăng ký nhận bản tin:
-        <input type="checkbox" name="newsletter" value="yes" /> Có </label
-      ><br /><br />
+        <label>Đăng ký nhận bản tin:</label>
+        <div class="checkbox-group">
+            <input type="checkbox" name="newsletter" value="yes"> Có
+        </div>
 
-      <button type="submit">Đăng ký hội viên</button>
+        <button type="submit">Đăng ký hội viên</button>
     </form>
-  </body>
+
+</body>
 </html>
