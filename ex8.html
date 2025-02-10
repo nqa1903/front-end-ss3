@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label>Họ và tên: <input type="text" name="fullname" /></label
+      ><br /><br />
+
+      <label>Ngày sinh: <input type="date" name="dob" /></label><br /><br />
+
+      <label>Giới tính:</label>
+      <input type="radio" name="gender" value="Nam" /> Nam
+      <input type="radio" name="gender" value="Nữ" /> Nữ <br /><br />
+
+      <label>Số căn cước công dân: <input type="text" name="cccd" /></label
+      ><br /><br />
+
+      <label>Ngày cấp: <input type="date" name="issuedate" /></label
+      ><br /><br />
+
+      <label>Nơi cấp: <input type="text" name="issueplace" /></label
+      ><br /><br />
+
+      <label>Số điện thoại: <input type="text" name="phone" /></label
+      ><br /><br />
+
+      <label>Email: <input type="email" name="email" /></label><br /><br />
+
+      <label>Địa chỉ thường trú:</label><br />
+      <textarea name="permanent_address"></textarea><br /><br />
+
+      <label>Địa chỉ tạm trú:</label><br />
+      <textarea name="temporary_address"></textarea><br /><br />
+
+      <label>Loại căn cước công dân:</label>
+      <input type="radio" name="cccd_type" value="new" /> Căn cước công dân mới
+      <input type="radio" name="cccd_type" value="old" /> Căn cước công dân cũ
+      <br /><br />
+
+      <label>Dân tộc: <input type="text" name="ethnicity" /></label><br /><br />
+
+      <label>Tôn giáo: <input type="text" name="religion" /></label><br /><br />
+
+      <label
+        >Quốc tịch:
+        <input
+          type="text"
+          name="nationality"
+          value="Việt Nam"
+          readonly /></label
+      ><br /><br />
+
+      <label>Họ tên cha/mẹ: <input type="text" name="parent_name" /></label
+      ><br /><br />
+
+      <label
+        >Số CMND/CCCD của cha/mẹ: <input type="text" name="parent_id" /></label
+      ><br /><br />
+
+      <label
+        >Tỉnh/Thành phố:
+        <select name="city">
+          <option>Chọn Tỉnh/Thành phố</option>
+          <option>Hà Nội</option>
+          <option>TP. Hồ Chí Minh</option>
+          <option>Đà Nẵng</option>
+          <option>Hải Phòng</option>
+          <option>Cần Thơ</option>
+        </select> </label
+      ><br /><br />
+
+      <button type="submit">Gửi thông tin</button>
+    </form>
+  </body>
+</html>
